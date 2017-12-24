@@ -48,13 +48,13 @@ public class OI {
 		return right_y;
 	}
 	
-	// For Debouce functionality
+	// For Debouce/Toggle functionality
 	private static boolean a_status = false;
 	private static boolean b_status = false;
 	private static boolean x_status = false;
 	private static boolean y_status = false;
 	
-	public static boolean getAButton() {
+	public static boolean getAToggle() {
 		if( a_status == Driver.getRawButton(1)) {
 			return a_status;
 		}
@@ -65,7 +65,7 @@ public class OI {
 		
 	}
 	
-	public static boolean getBButton() {
+	public static boolean getBToggle() {
 		if( b_status == Driver.getRawButton(2)) {
 			return b_status;
 		}
@@ -76,7 +76,7 @@ public class OI {
 		
 	}
 	
-	public static boolean getXButton() {
+	public static boolean getXToggle() {
 		if( x_status == Driver.getRawButton(3)) {
 			return x_status;
 		}
@@ -87,7 +87,7 @@ public class OI {
 		
 	}
 	
-	public static boolean getYButton() {
+	public static boolean getYToggle() {
 		if( y_status == Driver.getRawButton(4)) {
 			return y_status;
 		}
@@ -97,5 +97,28 @@ public class OI {
 		return y_status;
 		
 	}
+	
+	// Button Commands
+	public static boolean getAButton() {
+		a_status = Driver.getRawButton(1);
+		return a_status;
+		
+	}
+	
+	public static boolean getBButton() {
+		b_status = Driver.getRawButton(2);
+		return b_status;
+	}
+	
+	public static boolean getXButton() {
+		x_status = Driver.getRawButton(3);
+		return x_status;
+	}
+	
+	public static boolean getYButton() {
+		y_status = Driver.getRawButton(4);
+		return y_status;
+	}
+
 }
 
