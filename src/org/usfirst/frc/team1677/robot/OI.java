@@ -48,5 +48,54 @@ public class OI {
 		return right_y;
 	}
 	
+	// For Debouce functionality
+	private static boolean a_status = false;
+	private static boolean b_status = false;
+	private static boolean x_status = false;
+	private static boolean y_status = false;
+	
+	public static boolean getAButton() {
+		if( a_status == Driver.getRawButton(1)) {
+			return a_status;
+		}
+		else {
+			a_status = Driver.getRawButton(1);
+		}
+		return a_status;
+		
+	}
+	
+	public static boolean getBButton() {
+		if( b_status == Driver.getRawButton(2)) {
+			return b_status;
+		}
+		else {
+			b_status = Driver.getRawButton(2);
+		}
+		return b_status;
+		
+	}
+	
+	public static boolean getXButton() {
+		if( x_status == Driver.getRawButton(3)) {
+			return x_status;
+		}
+		else {
+			x_status = Driver.getRawButton(3);
+		}
+		return x_status;
+		
+	}
+	
+	public static boolean getYButton() {
+		if( y_status == Driver.getRawButton(4)) {
+			return y_status;
+		}
+		else {
+			y_status = Driver.getRawButton(4);
+		}
+		return y_status;
+		
+	}
 }
 
