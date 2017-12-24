@@ -22,17 +22,36 @@ Add debounce functionality to the buttons so we can prevent triggering of the bu
 0.3 Driver System Beta
 Initialize the driver system with mapped out ports and configured motors.
 	- List ports on robot map
-	
+	- Define Motors
+	- Configure CANTalons/Jaguars
+	- Configure PID Loop For PID
+
+0.4 Controll System
+Develop Multiple Controll Systems to Drivers. 
+	- Tank
+	- Arcade
+	- Arcade (Cheezy Style)
+
+0.5 Motion Profiles
+Provide a clean interface for jerk detection to see if we have colided into something and respond to the encounter (Auto Shift Down).
+	- NAVX Implementations
+	- Motion Profiles
+	- Jerk Detection
+
+0.6 Shifting
+Develop a automatic and shifting protocal based on speed profiles and command mode's (only relative to Arcade [ Cheezy Style ]) taken from version 0.5 Motion Profiles.
+	- Shifting Manual
+	- Shifting Automatic 
 
 ```
 
 ## Ports Diagram 
-| Motor Name  | Port Number |
-| :--------:  | :---------: |
-| LeftMaster  | 0           |
-| LeftSlave   | 1           |
-| RightMaster | 2           |
-| RightSlave  | 3           |
+| Motor Type  | Motor Name  | Port Number |
+| :--------:  | :--------:  | :---------: |
+| Blank       | LeftMaster  | 0           |
+| Blank       | LeftSlave   | 1           |
+| Blank       | RightMaster | 2           |
+| Blank       | RightSlave  | 3           |
 
 ### Contributers
 | Name        | Role             |

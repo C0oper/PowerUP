@@ -30,24 +30,60 @@ public class OI {
 	
 	public static double getLeft_x() {
 		left_x = Driver.getRawAxis(1);
+		
+		// Dead zone
+		if(left_x <= 0.1) {
+			left_x = 0.0;
+		}
+		if(left_x <= -0.1) {
+			left_x = 0.0;
+		}
+		
 		return left_x;
 	}
 	
 	public static double getLeft_y() {
 		left_y = Driver.getRawAxis(2);
+		
+		// Dead zone
+		if(left_y <= 0.1) {
+			left_y = 0;
+		}
+		if(left_y <= -0.1) {
+			left_y = 0;
+		}
+		
 		return left_y;
 	}
-	
+		
 	public static double getRight_x() {
 		right_x = Driver.getRawAxis(4);
+		
+		// Dead zone
+		if(right_x <= 0.1) {
+			right_x = 0;
+		}
+		if(right_x <= -0.1) {
+			right_x = 0;
+		}
+		
 		return right_x;
 	}
 	
 	public static double getRight_y() {
 		right_y = Driver.getRawAxis(5);
+	
+		// Dead zone
+		if(right_y <= 0.1) {
+			right_y = 0;
+		}
+		if(right_y <= -0.1) {
+			right_y = 0;
+		}
+		
 		return right_y;
 	}
-	
+
 	// For Debouce/Toggle functionality
 	private static boolean a_status = false;
 	private static boolean b_status = false;
