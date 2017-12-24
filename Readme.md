@@ -19,7 +19,20 @@ Add debounce functionality to the buttons so we can prevent triggering of the bu
         	- Debounce
 		- Toggle
 
+0.3 Driver System Beta
+Initialize the driver system with mapped out ports and configured motors.
+	- List ports on robot map
+	
+
 ```
+
+## Ports Diagram 
+| Motor Name  | Port Number |
+| :--------:  | :---------: |
+| LeftMaster  | 0           |
+| LeftSlave   | 1           |
+| RightMaster | 2           |
+| RightSlave  | 3           |
 
 ### Contributers
 | Name        | Role             |
