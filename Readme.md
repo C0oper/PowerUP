@@ -13,7 +13,7 @@ Connect Driver and CoDriver Controllers to the pc and log controller feed back.
 	- Joystick Feedback Routine
 	- Buttons Initialized
 	
-0.2 Controller Beta
+0.2 Controller
 Add debounce functionality to the buttons so we can prevent triggering of the buttons. And add add a toggle functionality.
 	- Button Feedback Routine
         	- Debounce
