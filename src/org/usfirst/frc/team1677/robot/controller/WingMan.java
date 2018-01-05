@@ -1,4 +1,4 @@
-package org.usfirst.frc.team1677.robot.subsystems;
+package org.usfirst.frc.team1677.robot.controller;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -16,17 +16,17 @@ public class WingMan {
 	private static final Button base_top = new JoystickButton(controller, 5);
 	private static final Button base_bottom = new JoystickButton(controller, 6);
 	
-	private static double axis_x; // One
-	private static double axis_y; // Zero
+	private double axis_x; // One
+	private double axis_y; // Zero
 	
-	private static boolean value_trigger;
-	private static boolean value_left_top;
-	private static boolean value_left_bottom;
-	private static boolean value_right_top;
-	private static boolean value_right_bottom;
+	private boolean value_trigger;
+	private boolean value_left_top;
+	private boolean value_left_bottom;
+	private boolean value_right_top;
+	private boolean value_right_bottom;
 	
-	private static boolean value_base_top;
-	private static boolean value_base_bottom;
+	private boolean value_base_top;
+	private boolean value_base_bottom;
 
 	public double getX() {
 		axis_x = controller.getRawAxis(1);

@@ -4,17 +4,26 @@ package org.usfirst.frc.team1677.robot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+
+import org.usfirst.frc.team1677.robot.subsystems.Chassis;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
 
-	public static OI oi;
-
+	public OI oi;
+	public Chassis chassis;
+	
 	@Override
 	public void robotInit() {
 		oi = new OI();
+		chassis = new Chassis();
+		
+		chassis.init();
+		
+		
 	}
 
 	@Override
@@ -44,6 +53,7 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
+		chassis.changeSpeed(0.2);
 
 	}
 
