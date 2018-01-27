@@ -8,12 +8,10 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 
 public class Robot extends IterativeRobot {
 
-	public OI oi;
 	public Chassis chassis;
 	
 	@Override
 	public void robotInit() {
-		oi = new OI();
 		chassis = new Chassis();
 	}
 
