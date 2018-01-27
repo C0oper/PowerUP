@@ -1,5 +1,7 @@
 package org.usfirst.frc.team1677.robot.controllers;
 
+import org.usfirst.frc.team1677.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.Joystick;
 
 public class ButtonBoard {
@@ -19,8 +21,11 @@ public class ButtonBoard {
 	
 	private boolean button_special;
 	
+	private double axis_x;
+	private double axis_y;
+	
 	public ButtonBoard() {
-		Controller = new Joystick(0);
+		Controller = new Joystick(RobotMap.CoDriverPort);
 		setButton_blue_bottom(false);
 		setButton_blue_top(false);
 		
@@ -34,9 +39,15 @@ public class ButtonBoard {
 		setButton_yellow_top(false);
 		
 		setButton_special(false);
+		
+		setAxis_x(0.0);
+		setAxis_y(0.0);
 	}
 	
-	public void updateButtons() {
+	public void updateInterface() {
+		setAxis_x(Controller.getRawAxis(2));
+		setAxis_y(Controller.getRawAxis(0));
+		
 		setButton_blue_top(Controller.getRawButton(0));
 		setButton_blue_bottom(Controller.getRawButton(1));
 		
@@ -122,5 +133,21 @@ public class ButtonBoard {
 
 	private void setButton_special(boolean button_special) {
 		this.button_special = button_special;
+	}
+
+	public double getAxis_x() {
+		return axis_x;
+	}
+
+	public void setAxis_x(double axis_x) {
+		this.axis_x = axis_x;
+	}
+
+	public double getAxis_y() {
+		return axis_y;
+	}
+
+	public void setAxis_y(double axis_y) {
+		this.axis_y = axis_y;
 	}
 }
