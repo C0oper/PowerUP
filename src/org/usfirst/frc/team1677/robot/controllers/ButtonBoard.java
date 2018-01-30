@@ -24,6 +24,9 @@ public class ButtonBoard {
 	private double axis_x;
 	private double axis_y;
 	
+	private static final boolean DEBUG = false;
+	private static final String TAG = "BUTTON BOARD: ";
+	
 	public ButtonBoard() {
 		Controller = new Joystick(RobotMap.CoDriverPort);
 		setButton_blue_bottom(false);
@@ -64,6 +67,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_blue_bottom() {
+		if(DEBUG) {
+			System.out.println(TAG + "Blue Bottom " + button_blue_bottom);
+		}
 		return button_blue_bottom;
 	}
 
@@ -72,6 +78,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_blue_top() {
+		if(DEBUG) {
+			System.out.println(TAG + "Blue Top " + button_blue_top);
+		}
 		return button_blue_top;
 	}
 
@@ -80,6 +89,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_green_bottom() {
+		if(DEBUG) {
+			System.out.println(TAG + "Green Bottom " + button_green_bottom);
+		}
 		return button_green_bottom;
 	}
 
@@ -88,6 +100,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_green_top() {
+		if(DEBUG) {
+			System.out.println(TAG + "Green Top " + button_green_top);
+		}
 		return button_green_top;
 	}
 
@@ -96,6 +111,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_red_bottom() {
+		if(DEBUG) {
+			System.out.println(TAG + "Red Bottom " + button_red_bottom);
+		}
 		return button_red_bottom;
 	}
 
@@ -104,6 +122,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_red_top() {
+		if(DEBUG) {
+			System.out.println(TAG + "Red Top " + button_red_top);
+		}
 		return button_red_top;
 	}
 
@@ -112,6 +133,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_yellow_bottom() {
+		if(DEBUG) {
+			System.out.println(TAG + "Yellow Bottom " + button_yellow_bottom);
+		}
 		return button_yellow_bottom;
 	}
 
@@ -120,6 +144,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_yellow_top() {
+		if(DEBUG) {
+			System.out.println(TAG + "Yellow Top " + button_yellow_top);
+		}
 		return button_yellow_top;
 	}
 
@@ -128,6 +155,9 @@ public class ButtonBoard {
 	}
 
 	public boolean isButton_special() {
+		if(DEBUG) {
+			System.out.println(TAG + "Special Button " + button_special);
+		}
 		return button_special;
 	}
 
@@ -136,6 +166,9 @@ public class ButtonBoard {
 	}
 
 	public double getAxis_x() {
+		if(DEBUG) {
+			System.out.println(TAG + "Axis X " + axis_x);
+		}
 		return axis_x;
 	}
 
@@ -144,6 +177,9 @@ public class ButtonBoard {
 	}
 
 	public double getAxis_y() {
+		if(DEBUG) {
+			System.out.println(TAG + "Axis Y " + axis_y);
+		}
 		return axis_y;
 	}
 

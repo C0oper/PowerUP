@@ -21,6 +21,8 @@ public class XboxController {
 	private double axis_x;
 	private double axis_y;
 	
+	private static final String TAG = "XBOX CONTROLLER: ";
+	
 	public XboxController() {
 		Controller = new Joystick(RobotMap.DriverPort);
 
@@ -38,7 +40,7 @@ public class XboxController {
 		setAxis_y(0.0);
 	}
 	
-	public void UpdateInterface() {
+	public void updateInterface() {
 		setButton_a(Controller.getRawButton(0));
 		setButton_b(Controller.getRawButton(1));
 		setButton_x(Controller.getRawButton(2));
