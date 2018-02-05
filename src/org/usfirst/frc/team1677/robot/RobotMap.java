@@ -14,4 +14,11 @@ public class RobotMap {
 	 */
 	public static final int DriverPort = 0;
 	public static final int CoDriverPort = 1;
+	
+	public static final int LeftEncoder_One = 0;
+	public static final int LeftEncoder_Two = 1;
+
+	public static final int EncoderInch = 76;
+	
+	
 }
