@@ -38,6 +38,9 @@ public class Pid_Controller {
 
 	private double setpointRange;
 	
+	private final boolean DEBUG = false;
+	private final String TAG = "PID CONTROLLER: ";
+	
 	public Pid_Controller(double P, double I, double D) {
 		this.setP(P);
 		this.setI(I);
@@ -47,7 +50,6 @@ public class Pid_Controller {
 		// Automatically Assume that you'll want it false
 		setReversed(false);
 		checkValues();
-
 	}
 
 	public Pid_Controller(double P, double I, double D, boolean reversed) {
@@ -196,9 +198,14 @@ public class Pid_Controller {
 		// System.out.printf("%5.2f\t%5.2f\t%5.2f\t%5.2f\n",output,Poutput, Ioutput, Doutput );
 
 		lastOutput=output;
+		if(DEBUG) {
+			System.out.println(TAG + "Output [" + output + "] Error [" + errorSum + "]" );
+			System.out.println(TAG + "P [" + P + "] I [" + I + "] D [" + D + "]");			
+		}
 		return output;
 	}
 
+	
 	/**
 	 * Forces a value into a specific range
 	 * @param value input value
@@ -228,10 +235,13 @@ public class Pid_Controller {
 	}
 	
 	public double getP() {
-		return P;
+		return P; 
 	}
 
 	public void setP(double p) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting P [" + p + "]");
+		}
 		P = p;
 	}
 
@@ -240,6 +250,9 @@ public class Pid_Controller {
 	}
 
 	public void setI(double i) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting I [" + i + "]");
+		}
 		I = i;
 	}
 
@@ -248,6 +261,9 @@ public class Pid_Controller {
 	}
 
 	public void setD(double d) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting D [" + d + "]");
+		}
 		D = d;
 	}
 
@@ -256,6 +272,9 @@ public class Pid_Controller {
 	}
 
 	public void setF(double f) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting F [" + f + "]");
+		}
 		F = f;
 	}
 
@@ -264,6 +283,9 @@ public class Pid_Controller {
 	}
 
 	public void setMaxIOutput(double maxIOutput) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Max I Output [" + maxIOutput + "]");
+		}
 		this.maxIOutput = maxIOutput;
 	}
 
@@ -272,6 +294,9 @@ public class Pid_Controller {
 	}
 
 	public void setMaxError(double maxError) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Max Error [" + maxError + "]");
+		}
 		this.maxError = maxError;
 	}
 
@@ -280,6 +305,9 @@ public class Pid_Controller {
 	}
 
 	public void setErrorSum(double errorSum) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Error Sum [" + errorSum + "]");
+		}
 		this.errorSum = errorSum;
 	}
 
@@ -288,6 +316,9 @@ public class Pid_Controller {
 	}
 
 	public void setMaxOutput(double maxOutput) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Max Output [" + maxOutput + "]");
+		}
 		this.maxOutput = maxOutput;
 	}
 
@@ -296,6 +327,9 @@ public class Pid_Controller {
 	}
 
 	public void setMinOutput(double minOutput) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Minimum Output [" + minOutput + "]");
+		}
 		this.minOutput = minOutput;
 	}
 
@@ -304,6 +338,9 @@ public class Pid_Controller {
 	}
 
 	public void setSetpoint(double setpoint) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Setpoint [" + setpoint + "]");
+		}
 		this.setpoint = setpoint;
 	}
 
@@ -336,6 +373,9 @@ public class Pid_Controller {
 	}
 
 	public void setOutputRampRate(double outputRampRate) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Output Ramp Rate [" + outputRampRate + "]");
+		}
 		this.outputRampRate = outputRampRate;
 	}
 
@@ -344,6 +384,7 @@ public class Pid_Controller {
 	}
 
 	public void setLastOutput(double lastOutput) {
+		
 		this.lastOutput = lastOutput;
 	}
 
@@ -352,6 +393,9 @@ public class Pid_Controller {
 	}
 
 	public void setOutputFilter(double outputFilter) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Output Filter [" + outputFilter + "]");
+		}
 		this.outputFilter = outputFilter;
 	}
 
@@ -360,6 +404,9 @@ public class Pid_Controller {
 	}
 
 	public void setSetpointRange(double setpointRange) {
+		if(DEBUG) {
+			System.out.println(TAG + "Setting Setpoint Range [" + setpointRange + "]");
+		}
 		this.setpointRange = setpointRange;
 	}
 }
