@@ -37,6 +37,18 @@ public class Pid_Controller {
 	private double outputFilter;
 
 	private double setpointRange;
+	
+	public Pid_Controller(double P, double I, double D) {
+		this.setP(P);
+		this.setI(I);
+		this.setD(D);
+		
+		setFirstRun(true);
+		// Automatically Assume that you'll want it false
+		setReversed(false);
+		checkValues();
+
+	}
 
 	public Pid_Controller(double P, double I, double D, boolean reversed) {
 		this.setP(P);
@@ -47,6 +59,19 @@ public class Pid_Controller {
 		setReversed(reversed);
 		checkValues();
 	}
+
+	public Pid_Controller(double P, double I, double D, double F) {
+		this.setP(P);
+		this.setI(I);
+		this.setD(D);
+		this.setF(F);
+
+		setFirstRun(true);
+		// Automatically Assume that you'll want it false
+		setReversed(false);
+		checkValues();
+	}
+	
 	
 	public Pid_Controller(double P, double I, double D, double F, boolean reversed) {
 		this.setP(P);
