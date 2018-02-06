@@ -38,23 +38,41 @@ public class Pid_Controller {
 
 	private double setpointRange;
 
-	public Pid_Controller(double P, double I, double D) {
+	public Pid_Controller(double P, double I, double D, boolean reversed) {
 		this.setP(P);
 		this.setI(I);
 		this.setD(D);
 		
 		setFirstRun(true);
-		setReversed(false);
+		setReversed(reversed);
+		checkValues();
 	}
 	
-	public Pid_Controller(double P, double I, double D, double F) {
+	public Pid_Controller(double P, double I, double D, double F, boolean reversed) {
 		this.setP(P);
 		this.setI(I);
 		this.setD(D);
 		this.setF(F);
 
 		setFirstRun(true);
-		setReversed(false);
+		setReversed(reversed);
+		checkValues();
+	}
+	
+	
+	private void checkValues(){
+		if(reversed){  // all values should be below zero
+			if(P>0) P*=-1;
+			if(I>0) I*=-1;
+			if(D>0) D*=-1;
+			if(F>0) F*=-1;
+		}
+		else{  // all values should be above zero
+			if(P<0) P*=-1;
+			if(I<0) I*=-1;
+			if(D<0) D*=-1;
+			if(F<0) F*=-1;
+		}
 	}
 	
 	public double getP() {
