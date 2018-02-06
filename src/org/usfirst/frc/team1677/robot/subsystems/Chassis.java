@@ -1,21 +1,16 @@
 package org.usfirst.frc.team1677.robot.subsystems;
 
+import org.usfirst.frc.team1677.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.Victor;
 
 public class Chassis {
-	private Victor Left;
-	private Victor Right;
+	public static Victor Left;
+	public static Victor Right;
 	
 	private static final boolean DEBUG = false;
 	private static final String TAG = "CHASSIS: ";
 	
-	public Chassis() {
-		Left = (new Victor(0));
-		Right = new Victor(1);
-		
-		setLeft(0.0);
-		setRight(0.0);
-	}
 
 	public void setLeft(double input) {
 		Left.set(input);
@@ -31,4 +26,12 @@ public class Chassis {
 		}
 	}
 	
+	public Chassis() {
+		Left = new Victor(RobotMap.LeftMaster);
+		Right = new Victor(RobotMap.RightMaster);
+		
+		setLeft(0.0);
+		setRight(0.0);
+	}
+
 }

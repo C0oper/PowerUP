@@ -2,8 +2,8 @@
 package org.usfirst.frc.team1677.robot;
 
 
-import org.usfirst.frc.team1677.robot.auto.Drive_Forward_No_Encoders;
 import org.usfirst.frc.team1677.robot.controllers.ButtonBoard;
+import org.usfirst.frc.team1677.robot.controllers.Encoders;
 import org.usfirst.frc.team1677.robot.controllers.Wingman;
 import org.usfirst.frc.team1677.robot.controllers.XboxController;
 import org.usfirst.frc.team1677.robot.subsystems.Chassis;
@@ -15,7 +15,7 @@ public class Robot extends IterativeRobot {
 	public Chassis chassis;
 	public Wingman driver;
 //	public ButtonBoard coDriver;
-	public Drive_Forward_No_Encoders autoExampleOne;
+	public Encoders enc;
 	
 	
 	private static final String TAG = "ROBOT: ";
@@ -23,8 +23,9 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {	
 		chassis = new Chassis();
-		driver = new Wingman();
-		// coDriver = new ButtonBoard();
+//		driver = new Wingman();
+//		 coDriver = new ButtonBoard();
+		enc = new Encoders();
 	}
 
 	@Override
@@ -40,17 +41,18 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void autonomousInit() {
-		autoExampleOne = new Drive_Forward_No_Encoders();
+		enc.resetLeftEncoder();
+//		enc.resetRightEncoder();
 	}
 
 	@Override
 	public void autonomousPeriodic() {
-		autoExampleOne.run();
+		enc.updateInterface();
 	}
 
 	@Override
 	public void teleopInit() {
-		// autoExampleOne.stop();
+	
 	}
 
 	@Override
