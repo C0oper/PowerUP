@@ -3,7 +3,7 @@ package org.usfirst.frc.team1677.robot.auto;
 import org.usfirst.frc.team1677.robot.controllers.Encoders;
 import org.usfirst.frc.team1677.robot.subsystems.Chassis;
 
-public class Left_Auto {
+public class Left_Switch_Auto {
 
 	private Encoders enc;
 	private Chassis chassis;
@@ -12,7 +12,7 @@ public class Left_Auto {
 	
 	private final int distanceToSwitch = 168; 
 	
-	public void Left_Auto() {
+	public Left_Switch_Auto() {
 		enc = new Encoders();
 		chassis = new Chassis();
 		speed = 0.7;
