@@ -46,14 +46,20 @@ Develop a automatic and shifting protocal based on speed profiles and command mo
 ```
 
 ## Ports Diagram 
-| Motor Type  | Motor Name  | Port Number |
+|  Name	      | PWM         | DIO         |
 | :--------:  | :--------:  | :---------: |
-| Blank       | LeftMaster  | 0           |
-| Blank       | LeftSlave   | 1           |
-| Blank       | RightMaster | 2           |
-| Blank       | RightSlave  | 3           |
+| Right Drive | 0 	    | N/A         |
+| Left Drive  | 1           | N/A         |
+| SRX Tan     | 2           | N/A         |
+| Winch       | 3           | N/A         |
+| Elevator    | 4           | N/A         |
+| String Pot  | N/A         | 4           |
+| Left Enc    | N/A         | 2,3         |
+| Right Enc   | N/A         | 0,1         |
+
 
 ### Contributers
 | Name        | Role             |
 | :---------: | :--------------- |
 | Josh Brown  | Lead Programmer  |
+| Cooper Gheen| Student          | 
