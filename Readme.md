@@ -40,7 +40,8 @@ Provide a clean interface for jerk detection to see if we have colided into some
 
 0.6 Shifting
 Develop a automatic and shifting protocal based on speed profiles and command mode's (only relative to Arcade [ Cheezy Style ]) taken from version 0.5 Motion Profiles.
-	- Shifting Manual
+	- Shifting 
+	
 	- Shifting Automatic 
 
 ```
@@ -52,6 +53,20 @@ Develop a automatic and shifting protocal based on speed profiles and command mo
 | Blank       | LeftSlave   | 1           |
 | Blank       | RightMaster | 2           |
 | Blank       | RightSlave  | 3           |
+
+## CoDriver Buttons
+_________________________________________
+| Button Name  	 | Color  | Port Number |
+|:--------------:|:------:|:-----------:| 
+| Winch Up	 | Red    | 0           |   
+| Winch Down	 | Red    | 1           |  
+| Elevator Up	 | Blue   | 2           |
+| Elevator Down	 | Blue   | 3           |
+| Arm		 | White  | 4           |
+| Grabber Open	 | Green  | 5           |
+| Grabber close	 | Green  | 6           |
+| Intake Forward | Yellow | 7           |
+| Intake Reverse | Yellow | 8           |
 
 ### Contributers
 | Name        | Role             |
